@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Spot_Reservation_Detail</title>
+</head>
+<body>
+    <h1>Spot Reservation Detail</h1>
+    <div id = 'main'>
+        <div id ='canvas'>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Spot ID:</strong> {{ spot.id }}</li>
+            <li class="list-group-item"><strong>Lot Location:</strong> {{ lot.prime_location }}</li>
+            <li class="list-group-item"><strong>Reserved By:</strong> {{ user.username }}</li>
+            <li class="list-group-item"><strong>Vehicle Number:</strong> {{ reserve.vehicle_number }}</li>
+            <li class="list-group-item"><strong>Start Time:</strong> {{ reserve.start_time }}</li>
+            <li class="list-group-item"><strong>Cost:</strong> ₹{{ reserve.total_cost }}</li>
+            </ul>
+            <br>
+            <a href="{{ url_for('admin_dashboard') }}">Back to Admin Dashboard</a>
+            
+        </div>
+    </div>
+    
+</body>
+
+
+</html>
